@@ -9762,3 +9762,51 @@ a.text-dark:hover, a.text-dark:focus {
     border-right: none !important;
   }
 }
+
+.circle {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 60px;
+  text-align: center;
+}
+
+/* Style untuk setiap bulatan animasi */
+.circle span {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e47a2ead;
+  animation: pulse 1s ease-out infinite;
+  font-size: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Animasi pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+/* Style untuk menempatkan bulatan animasi berjejer */
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 65px;
+}
+
+.countdown-container .circle {
+  margin: 0 10px;
+}
