@@ -7,6 +7,10 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
+    <meta name="description" content="Kamis, 04 Mei 2023" />
+    <meta property="og:image" content="https://metatelid.github.io/sahat-wiedya/img/icon.png" />
+    <meta property="og:image:width" content="128" />
+    <meta property="og:image:height" content="118" />
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -27,6 +31,32 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Start Modal -->
+    <button type="button" class="btn btn-modal btn-primary d-none" data-toggle="modal" data-target="#fullscreenModal">Buka Modal</button>
+
+    <div class="modal fade" id="fullscreenModal" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="fullscreenModalLabel">Undangan Pernikahan Alba & Serly</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ</p>
+            <p>Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir. (QS Ar-Rum : 21)</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="playAudio()">Buka Undangan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio id="music" hidden loop>
+        <source src="img/music.mp3" type="">
+    </audio>
+
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
@@ -46,8 +76,8 @@
                 <h1 class="font-secondary text-white mb-n2">Alba <span class="text-primary">&</span> Serly</h1>
             </a>
             <div class="navbar-nav mr-auto py-0">
-                <a href="#family" class="nav-item nav-link">Family</a>
                 <a href="#event" class="nav-item nav-link">Event</a>
+                <a href="#family" class="nav-item nav-link">Gifts</a>
                 <a href="#rsvp" class="nav-item nav-link">RSVP</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
@@ -68,10 +98,7 @@
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
                             </div>
-                            <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                                <span></span>
-                            </button>
+                            <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px; padding-top: 15px;">Kamis, 04 Mei 2023</h3>
                         </div>
                     </div>
                 </div>
@@ -83,10 +110,7 @@
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
                             </div>
-                            <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                                <span></span>
-                            </button>
+                            <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px; padding-top: 15px;">Kamis, 04 Mei 2023</h3>
                         </div>
                     </div>
                 </div>
@@ -98,10 +122,7 @@
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
                             </div>
-                            <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                                <span></span>
-                            </button>
+                            <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px; padding-top: 15px;">Kamis, 04 Mei 2023</h3>
                         </div>
                     </div>
                 </div>
@@ -120,25 +141,22 @@
     </div>
     <!-- Carousel End -->
 
-
-    <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>        
-                    <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
+    <!-- Start Countdown -->
+    <div class="countdown-container">
+        <div class="circle">
+            <span id="days"></span>
+        </div>
+        <div class="circle">
+            <span id="hours"></span>
+        </div>
+        <div class="circle">
+            <span id="minutes"></span>
+        </div>
+        <div class="circle">
+            <span id="seconds"></span>
         </div>
     </div>
-    <!-- Video Modal End -->
-
+    <!-- End Countdown -->
 
     <!-- About Start -->
     <div class="container-fluid py-5" id="about">
@@ -332,7 +350,7 @@
                         <img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
                         <h4 class="mb-3">Akad Nikah</h4>
                         <p class="mb-2">Gedung P3SB Cililin, Kec. Cililin, Kab Bandung Barat</p>
-                        <p class="mb-0">00:08 - 10:00</p>
+                        <p class="mb-0">Kamis, 04 Mei 2023, 00:08 - 10:00</p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -340,8 +358,13 @@
                         <img class="img-fluid mb-4" src="img/event-2.jpg" alt="">
                         <h4 class="mb-3">Resepsi</h4>
                         <p class="mb-2">Gedung P3SB Cililin, Kec. Cililin, Kab Bandung Barat</p>
-                        <p class="mb-0">11:00 - 15:00</p>
+                        <p class="mb-0">Kamis, 04 Mei 2023, 11:00 - 15:00</p>
                     </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6" style="margin-top: 20px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15842.09266852128!2d107.4580502!3d-6.9474439!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68f0131ab1f537%3A0x2b6f1ef7a72f204b!2sP3SB%20Cililin!5e0!3m2!1sid!2sid!4v1682519028561!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -361,26 +384,24 @@
             <div class="col-md-4">
               <div class="card d-block mb-3"><img class="card-img-top" src="img/bca.jpg" alt="Bride Maid 1">
                 <div class="card-body text-center">
-                  <div class="h5">Berikan Hadiah Terbaik</div>
                   <p class="mb-0 text-muted mb-1">No. Rekening</p>
                   <div class="input-group mb-1">
-                    <button class="btn btn-outline-dark" type="button" id="button-addon1" onclick="copy_bca()"><i class="bi bi-clipboard-plus"></i> Copy</button>
-                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="2780580618" id="bca" readonly="">
+                    <button class="btn btn-outline-dark" type="button" id="button-addon1" onclick="copy_bca1()"><i class="bi bi-clipboard-plus"></i> Copy</button>
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="1370346794" id="bca1" readonly="">
                   </div>
-                  <p>A. N. Iqbal Nurdiana</p>
+                  <p>A. N. Alba Subagja</p>
                 </div>
               </div>
             </div>
             <div class="col-md-4">
               <div class="card d-block mb-3"><img class="card-img-top" src="img/bca.jpg" alt="Bride Maid 1">
                 <div class="card-body text-center">
-                  <div class="h5">Berikan Hadiah Terbaik</div>
                   <p class="mb-0 text-muted mb-1">No. Rekening</p>
                   <div class="input-group mb-1">
-                    <button class="btn btn-outline-dark" type="button" id="button-addon1" onclick="copy_bca()"><i class="bi bi-clipboard-plus"></i> Copy</button>
-                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="2780580618" id="bca" readonly="">
+                    <button class="btn btn-outline-dark" type="button" id="button-addon1" onclick="copy_bca2()"><i class="bi bi-clipboard-plus"></i> Copy</button>
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="5140534830" id="bca2" readonly="">
                   </div>
-                  <p>A. N. Iqbal Nurdiana</p>
+                  <p>A. N. Serli Mania</p>
                 </div>
               </div>
             </div>
@@ -409,6 +430,34 @@
     </div>
     <!-- RSVP End -->
 
+    <!-- Closing Start -->
+    <div class="container-fluid py-5" id="closing">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Closing</h6>
+                <h1 class="font-secondary display-4">Terimakasih Telah Membaca Undangan Kami</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h5 class="font-weight-normal text-muted mb-3 pb-3">Silahkan saksikan sedikit memori dari kami sebagai penutup, dan saksikan live kami di link instagram berikut.</h5>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <p>
+                      Klik untuk mematikan lagu --->
+                      <button type="button" class="btn btn-success play d-none" onclick="playAudio()"><i class="bi bi-volume-mute-fill"></i></button>
+                      <button type="button" class="btn btn-warning pause" onclick="pauseAudio()"><i class="bi bi-volume-up-fill"></i></button>
+                    <p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Tnmv7rVp86U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p>Live IG : <a class="btn btn-outline-primary btn-square" href="https://instagram.com/pangestumoto?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a> PANGESTUMOTO</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Closing End -->
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
@@ -424,11 +473,11 @@
                 <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="d-flex justify-content-center py-2">
-                <p class="text-white" href="#">info@example.com</p>
+                <p class="text-white" href="#">pratamazul21@gmail.com</p>
                 <span class="px-3">|</span>
-                <p class="text-white" href="#">+012 345 6789</p>
+                <p class="text-white" href="#">+62 8122 0531 990</p>
             </div>
-            <p class="m-0">&copy; <a class="text-primary" href="#">Domain Name</a>. Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
+            <p class="m-0">&copy; <a class="text-primary" href="#">metatelid.github.io</a>. Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
             </p>
         </div>
     </div>
